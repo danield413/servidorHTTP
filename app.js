@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 
-const mongoURL = 'mongodb://127.0.0.1:27017/database';
+const mongoURL = 'mongodb://bd.grupo5.lab:27017/database';
 
 // Configuración motor de vistas EJS
 app.set('view engine', 'ejs');
@@ -63,8 +63,8 @@ app.get('/', async (req, res) => {
 
 // Puerto y escucha
 const PUERTO = 80;
-const IP_LOCAL = '127.0.0.1';
+const IP_LOCAL = '10.200.50.6';
 
 app.listen(PUERTO, IP_LOCAL, () => {
-  console.log(`Servidor corriendo en http://${IP_LOCAL}:${PUERTO}`);
+  console.log(`Servidor corriendo en http://${IP_LOCAL}:${PUERTO} ó http://www.grupo5.lab:${PUERTO}`);
 });
